@@ -1,28 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Gamja+Flower|Roboto:400,700" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>The Doorbell App</title>
   <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.20.2.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="theme.css">
 </head>
 <body>
-  <div>Connected to doorbell</div>
+  <div class="heading"><h1>The Doorbell App</h1></div>
+
   <form>
-    <input type="text" id="subscribe_uuid">
-    <input type="button" value="Submit" onclick="subscribeToUuid()">
+    <input type="text" id="subscribe_uuid" placeholder="Enter user's ID here">
+    <input type="button" id="connectuser" value="Connect" onclick="subscribeToUuid()">
   </form>
-  <div>
-    <input type="button" value="Ping" id="ping" onclick="publishSampleMessage()">
+
+<br>
+
+  <div id="doorbellbut">
+    <input type="button" value="Ring the Doorbell" id="ping" onclick="publishSampleMessage()">
   </div>
-	<div id="myid">My id - <span></span></div>
-	<div id="subscribed_to">Subscribed to - <span></span></div>
+
+<br>
+	
+  <div id="myid"><strong>Your ID: </strong><span></span></div>
+
+<br>
+
+	<div id="subscribed_to"><strong>Currently subscribed to: </strong><span></span></div>
+
+<br>
+
 	<div id="message">
-		Message
+		<strong>Doorbell Ring History: </strong>
 		<div></div>
 	</div>
+
+
 </body>
 <script>
 
@@ -35,8 +52,8 @@ $(document).ready(function () {
 	$("#myid span").text(myId)
 
   pubnub = new PubNub({
-       publishKey : 'demo',
-       subscribeKey : 'demo'
+       publishKey : 'pub-c-bd510472-e8ef-418e-8d13-dab4113efe45',
+       subscribeKey : 'sub-c-2f7766ea-4cae-11e8-8601-a29164142108'
    })
   
   console.log("Subscribing..");

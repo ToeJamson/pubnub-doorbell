@@ -1,0 +1,82 @@
+/* App Body */
+
+body {
+	font-family: 'Roboto', sans-serif;
+	max-width: 340px;
+    margin: auto;
+    background-color: #fdfbfb;
+}
+
+h1 {
+	font-family: 'Gamja Flower', sans-serif;
+	color: white;
+}
+
+div.heading {
+	padding: 10px 30px 10px 30px;
+	margin-bottom: 10px;
+	text-align: center;
+	background-color: #2D3436;
+
+}
+
+#doorbellbut {
+	text-align: center;
+}
+
+/* Inputs */
+
+input[type=text] {
+    padding:7px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    width: 60%;
+}
+
+input[type=text]:focus {
+    border-color:#ffa726;
+}
+
+#connectuser {
+	border: 2px solid #2D3436;
+	background-color: #0984E3;
+	border-radius: 6px;
+	text-transform: uppercase;
+	padding: 7px;
+	width: 33%;
+	color: white;
+}
+
+#connectuser:hover {
+    background-color: #2D3436;
+    color: white;
+}
+
+#ping {
+  height: 175px;
+  width: 175px;
+  border-radius: 50%;
+  border: 2px solid #799496;
+  background-color: #00B894;
+  color: white;
+  font-size: 1em;
+}
+
+#ping:hover {
+	color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+input[type=submit] {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+
+
+
